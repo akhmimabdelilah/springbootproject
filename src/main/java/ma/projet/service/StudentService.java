@@ -43,6 +43,10 @@ public class StudentService implements IDao<Student>{
 	public List<Student> findAll() {
 		return repository.findAll();
 	}
+	
+	public List<Student> finByFiliere(Filiere filiere) {
+		return repository.findByFiliere(filiere);
+	}
 
 }
 
