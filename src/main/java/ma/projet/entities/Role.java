@@ -12,14 +12,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.ManyToMany;
 
 @Entity
-public class Role implements Serializable{
-	
+public class Role implements Serializable {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
-	
-	@ManyToMany (mappedBy = "roles")
+
+	@ManyToMany(mappedBy = "roles")
 	@JsonIgnore
 	private List<User> users;
 
@@ -50,7 +50,10 @@ public class Role implements Serializable{
 	public void setUsers(List<User> users) {
 		this.users = users;
 	}
-	
 
-	
+	@Override
+	public String toString() {
+		return "Role [id=" + id + ", name=" + name + ", users=" + users + "]";
+	}
+
 }

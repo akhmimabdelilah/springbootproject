@@ -55,7 +55,7 @@ public class RoleController {
 			return ResponseEntity.ok(service.update(newRole));
 		}
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Object> deleteRole(@PathVariable int id) {
 		Role role = service.findById(id);
@@ -66,5 +66,5 @@ public class RoleController {
 			return ResponseEntity.ok("filière supprimée");
 		}
 	}
-	
+
 }

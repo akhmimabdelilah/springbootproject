@@ -24,7 +24,7 @@ public class StudentService implements IDao<Student>{
 		try {
 			repository.delete(o);
 			return true;
-		} catch (Exception e) {
+		} catch (Exception e) { 
 			return false;
 		}
 	}

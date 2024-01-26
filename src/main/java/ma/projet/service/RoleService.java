@@ -9,8 +9,9 @@ import ma.projet.dao.IDao;
 import ma.projet.entities.Filiere;
 import ma.projet.entities.Role;
 import ma.projet.repositories.RoleRepository;
+
 @Service
-public class RoleService implements IDao<Role>{
+public class RoleService implements IDao<Role> {
 	@Autowired
 	private RoleRepository repository;
 
@@ -45,4 +46,3 @@ public class RoleService implements IDao<Role>{
 	}
 
 }
-

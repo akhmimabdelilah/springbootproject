@@ -11,17 +11,16 @@ import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.ManyToMany;
 
-
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
 public class User implements Serializable {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected int id;
 	protected String login;
 	protected String password;
-	
+
 	@ManyToMany
 	protected List<Role> roles;
 
@@ -60,7 +59,5 @@ public class User implements Serializable {
 	public void setRoles(List<Role> roles) {
 		this.roles = roles;
 	}
-	
-	
 
 }

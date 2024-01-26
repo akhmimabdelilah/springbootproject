@@ -29,7 +29,7 @@ public class StudentController {
 	public List<Student> findAllStudent() {
 		return service.findAll();
 	}
-	
+
 	@GetMapping("/filieres")
 	public List<Student> findByFiliere(@RequestBody Filiere filiere) {
 		return service.finByFiliere(filiere);
@@ -61,7 +61,7 @@ public class StudentController {
 			return ResponseEntity.ok(service.update(newStudent));
 		}
 	}
-	
+
 	@DeleteMapping("/{id}")
 	public ResponseEntity<Object> deleteStudent(@PathVariable int id) {
 		Student student = service.findById(id);
@@ -72,5 +72,5 @@ public class StudentController {
 			return ResponseEntity.ok("filière supprimée");
 		}
 	}
-	
+
 }
